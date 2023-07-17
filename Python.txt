@@ -1,0 +1,216 @@
+Python avec jo
+
+Type
+# 1.5 ==> float
+# vrai ou faux ==> boolean
+#print(type(nom)) ==> string
+#print(type(age)) ==> integer
+# str(age) ==> Conversion en str
+# int(age) ==> Conversion en int
+# boucle while : "tant que" ... 
+
+
+# ==> commentaire
+""" ==> commentaire plusieurs ligne
+input ==> Retourne chaine de caractère
+
+
+
+Exception et essais
+
+try:
+    age_prochain = int(age) + 1
+except ValueError:
+    print("ERREUR: Vous devez rentrer un nombre pour l'age")
+else:
+    Si aucune erreur
+
+# print("aaa" + "bbb" + str(19)) ==> concaténation
+# print("aaa", "bbb", str(19)) ==> passé plusieurs parametre 
+
+
+n = 0  # cree la variable
+print(n)
+n = 1  # réaffecte la variable
+print(n)
+n = n + 1  # incrémente 
+print(n)
+
+while n < 10:
+    print("Valeur de n: " + str(n))
+    n = n + 1
+
+print("fin de la boucle")
+
+
+
+Boucle while
+
+while (condition):
+	do
+
+
+
+
+
+Exo 1
+nom = input("Quel est ton nom ?  ")
+print("Je m'appelle " + nom + ".")
+print()
+print("Mon nom c'est : " + nom)
+
+
+
+Exo 2
+nom = input("Quel est ton nom ?  ")
+age = input("Quel age avez vous ? ")
+print("Je m'appelle " + nom + ".")
+print()
+print("Vous vous appelez " + nom, "vous avez", age,"ans")
+
+
+
+Exo 3 
+#nom = input("Quel est ton nom ?  ")
+#age = input("Quel age avez vous ? ")
+
+nom = "toto"
+age = 30
+age_prochain = age + 1
+print("Vous vous appelez " + nom + " vous avez " + str(age) + "ans")
+print("L'an prochain vous aurez " + str(age_prochain) + "ans")
+
+
+Exo 4
+
+nom = input("Quel est ton nom ?  ")
+age = input("Quel age avez vous ? ")
+
+try:
+    age_prochain = int(age) + 1
+except:
+    print("ERREUR: Vous devez rentrer un nombre pour l'age")
+else:
+    print("Vous vous appelez " + nom + " vous avez " + str(age) + "ans")
+    print("L'an prochain vous aurez " + str(age_prochain) + "ans")
+
+
+Exo 5
+
+try:
+    age_int = int(age) 
+    print("Vous vous appelez " + nom + " vous avez " + str(age_int) + "ans")
+    print("L'an prochain vous aurez " + str(age_int + 1) + "ans")
+except:
+    print("ERREUR: Vous devez rentrer un nombre pour l'age")
+
+
+Exo 6
+
+nom = input("Quel est ton nom ?  ")
+age = input("Quel age avez vous ? ")
+
+try:
+    age_int = int(age) 
+    print("Vous vous appelez " + nom + " vous avez " + str(age_int) + "ans")
+    print("L'an prochain vous aurez " + str(age_int + 1) + "ans")
+except ValueError:
+    print("ERREUR: Vous devez rentrer un nombre pour l'age")
+except TypeError:
+    print("ERREUR: Vérifiez votre code !")
+
+
+Exo 7
+
+mdp = ""
+
+while not mdp == "toto":
+    mdp = input("Quel est votre mot de passe ? ")
+    
+print("le mot de passe correct")
+
+
+Exo 8
+
+nom = input("Quel est votre nom ? ")
+
+age_prochain = 0 
+
+while age_prochain == 0:
+    age = input("Quelle est votre âge ? ")
+    try:
+        age_prochain = int(age) + 1 
+    except:
+        print("ERREUR: Vous devez rentrer un nombre pour l'âge")
+
+print("Vous vous appelez " + nom + " vous avez " + str(age) + " ans")
+print("L'an prochain vous aurez " + str(age_prochain) + " ans")
+
+
+
+
+Exo 9
+
+nom = input("Quel est votre nom ? ")
+age = 0 
+
+while age_prochain == 0:
+    age_str = input("Quelle est votre âge ? ")
+    try:
+        age = int(age_str)  
+    except:
+        print("ERREUR: Vous devez rentrer un nombre pour l'âge")
+
+print("Vous vous appelez " + nom + " vous avez " + str(age) + " ans")
+print("L'an prochain vous aurez " + str(age+1) + " ans")
+
+
+Exo 10
+
+nom = ""
+while nom == "":
+    nom = input("Quel est votre nom ? ")
+
+
+Exo 11
+
+def demander_age(): 
+    age_int = 0 
+    while age_int == 0:
+        age_str = input("Quelle est votre âge ? ")
+        try:
+            age_int = int(age_str)  
+        except:
+            print("ERREUR: Vous devez rentrer un nombre pour l'âge")
+    return age_int
+
+
+Exo 12
+
+
+def demander_nom():
+    reponse_nom = ""
+    while reponse_nom == "":
+        nom = input("Quel est votre nom ? ")
+        reponse_nom = nom
+    return reponse_nom
+
+
+def demander_age(): 
+    age_int = 0 
+    while age_int == 0:
+        age_str = input("Quelle est votre âge ? ")
+        try:
+            age_int = int(age_str)  
+        except:
+            print("ERREUR: Vous devez rentrer un nombre pour l'âge")
+    return age_int
+
+# demander le nom
+nom = demander_nom()
+
+# demander l'age
+age = demander_age()
+
+print("Vous vous appelez " + nom + " vous avez " + str(age) + " ans")
+print("L'an prochain vous aurez " + str(age+1) + " ans")
